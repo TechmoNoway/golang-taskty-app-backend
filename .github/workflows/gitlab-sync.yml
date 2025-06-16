@@ -16,5 +16,5 @@ jobs:
         run: |
           git config --global user.name "TechmoNoway"
           git config --global user.email "cuty0406@outlook.com"
-          git remote add gitlab https://TechmoNoway:${{ secrets.GITLAB_TOKEN }}@gitlab.com/TechmoNoway/<repo>.git
+          git remote add gitlab https://TechmoNoway:${{ secrets.GITLAB_TOKEN }}@gitlab.com/TechmoNoway/golang-taskty-app-backend.git
           git push gitlab main
