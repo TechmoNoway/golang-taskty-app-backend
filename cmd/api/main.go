@@ -1,11 +1,14 @@
 package main
 
 import (
+	"github.com/TechmoNoway/golang-taskty-app-backend/config"
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/cors"
 )
 
 func main() {
+
+	envConfig := config.NewEnvConfig()
 
 	app := fiber.New(fiber.Config{
 		AppName:      "TasktyApp",
@@ -21,6 +24,6 @@ func main() {
 
 	// server := app.Group("/api/v1")
 
-	app.Listen(":4242")
+	app.Listen(":" + envConfig.ServerPort)
 
 }
